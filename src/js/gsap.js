@@ -30,7 +30,6 @@ ani1.fromTo(".portfolio__title__line", {width: "0.18vw", height: "0" },{width: "
     .to(".portfolio__title__line", {width: "0", height: "0" })
     .to(".portfolio__title__line", {width: "0", height: "0" })
     .to(".portfolio__title__line", {width: "0", height: "0" })
-    .to(".portfolio__title__line", {width: "0", height: "0",duration: 2 })
 
 
 ScrollTrigger.create({
@@ -40,17 +39,41 @@ ScrollTrigger.create({
     end: "+=4500",
     scrub: true,
     // pin: true,
-    markers: true,
+    // markers: true,
     // anticipatePin: 1
 });
 
 const ani2 = gsap.timeline();
-ani2.to('.portfolio__desc', { scale: 0.2, duration:10 })
+ani2.to('.portfolio__desc', {
+    scale: 0.65,
+    duration: 5,
+    ease: "circ.inOut",
+    easeParams: [1, 0.3] // easeParams를 조정하여 효과를 변경
+  }, "a");
+ani2.to('.title.t1', { yPercent:15, duration:5 ,   ease: "circ.inOut",
+easeParams: [1, 0.3] // easeParams를 조정하여 효과를 변경
+}, "a");
+ani2.to('.title.t2', { yPercent:-15, duration:5 ,   ease: "circ.inOut",
+easeParams: [1, 0.3] // easeParams를 조정하여 효과를 변경
+}, "a");
 ScrollTrigger.create({
     animation: ani2,
     trigger: '.portfolio__desc.t0',
     start: 'bottom -300%',
-    end: '+=7000',
+    end: '+=8000',
+    scrub: true,
+    // pin: true,
+    // anticipatePin: 1,
+    // markers: true,
+});
+
+const ani3 = gsap.timeline();
+ani3.fromTo('.portfolio__item.t1 ul li', { xPercent: 500,ease: "power4.out"},{ xPercent: -600,ease: "power4.out"})
+ScrollTrigger.create({
+    animation: ani3,
+    trigger: '.portfolio__desc.t1',
+    start: 'bottom -700%',
+    end: '+=15000',
     scrub: true,
     // pin: true,
     // anticipatePin: 1,
