@@ -45,12 +45,12 @@ ScrollTrigger.create({
 });
 
 const ani2 = gsap.timeline();
-ani2.to('.portfolio__desc.t0', { scale: 0.4, duration:10 })
+ani2.to('.portfolio__desc', { scale: 0.2, duration:10 })
 ScrollTrigger.create({
     animation: ani2,
     trigger: '.portfolio__desc.t0',
     start: 'bottom -300%',
-    end: '+=5000',
+    end: '+=7000',
     scrub: true,
     // pin: true,
     // anticipatePin: 1,

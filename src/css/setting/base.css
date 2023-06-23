@@ -95,7 +95,7 @@ button {
     width: 120vw;
     height: 60vw;
     /* position: relative; */
-    border: 4px solid #fff;
+    /* border: 2px solid #fff; */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -104,8 +104,8 @@ button {
 }
 .portfolio__desc.t1 {
     z-index: 1;
-    width: 150vw;
-    height: 70vw;
+    width: 174vw;
+    height: 87vw;
     /* position: relative; */
     border: 2px solid #fff;
     /* background-color: #d47b7b; */
@@ -127,13 +127,13 @@ button {
 .portfolio__desc::after {
     top: 0;
     left: 0;
-    transform: rotate(26.4deg);
+    transform: rotate(26.6deg);
     transform-origin: left top;
 }
 .portfolio__desc::before {
     top: 0;
     right: 0;
-    transform: rotate(333.7deg);
+    transform: rotate(333.5deg);
     transform-origin: right top;
 }
 
@@ -144,7 +144,7 @@ button {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #000;
+    /* background-color: #000; */
     border: 2px solid #fff;
 }
 .portfolio__line::after, 
@@ -166,6 +166,9 @@ button {
     right: 0;
     transform: rotate(206.4deg);
     transform-origin: right bottom;
+}
+.portfolio__desc.t1 .portfolio__line {
+    /* margin: 1vw; */
 }
 
 .portfolio__item {
