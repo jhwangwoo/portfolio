@@ -124,7 +124,7 @@
     width: 174.6vw;
     height: 87.44vw;
     /* position: relative; */
-    border: 2px solid #fff;
+    /* border: 2px solid #fff; */
     /* background-color: #d47b7b; */
     position: absolute;
     top: 50%;
@@ -227,4 +227,126 @@
     border: 2px solid #fff;
     background-color: #000;
 }
+
+
+/* boxtable2 */
+.portfolio__desc.t2 {
+    z-index: 2;
+    width: 253.0vw;
+    height: 127vw;
+    /* position: relative; */
+    border: 2px solid #fff;
+    /* background-color: #d47b7b; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+.portfolio__desc.t2::after, 
+.portfolio__desc.t2::before {
+    position: absolute;
+    content: '';
+    width: 15.9%;
+    height: 2px;
+    background-color: #fff;
+} 
+.portfolio__desc.t2::after {
+    top: 0;
+    left: 0;
+    transform: rotate(26.8deg);
+    transform-origin: left top;
+}
+.portfolio__desc.t2::before {
+    top: 0;
+    right: 0;
+    transform: rotate(333.2deg);
+    transform-origin: right top;
+}
+
+.portfolio__line {
+    width: 69%;
+    height: 69%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: #000; */
+    border: 2px solid #fff;
+}
+
+.portfolio__desc.t2 .portfolio__line {
+    /* margin: 1vw; */
+}
+
+.box__gap.t2 {
+    width: 71.8%;
+    height: 71.5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* overflow: hidden; */
+    border: 2px solid #fff;
+}
+.box__gap.t2::after, 
+.box__gap.t2::before {
+    position: absolute;
+    content: '';
+    width: 22.29%;
+    height: 2px;
+    background-color: #fff;
+} 
+.box__gap.t2::after {
+    bottom: 0;
+    left: 0;
+    transform: rotate(153.3deg);
+    transform-origin: left bottom;
+}
+.box__gap.t2::before {
+    bottom: 0;
+    right: 0;
+    transform: rotate(206.67deg);
+    transform-origin: right bottom;
+}
+
+.portfolio__item__box {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.portfolio__item__box {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+.portfolio__item.t2 {
+    width: 99.9%;
+    height: 98.5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.portfolio__item.t2 ul {
+    width: 100%;
+    height: 165%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.portfolio__item.t2 ul li {
+    width: 98%;
+    height: 27%;
+    margin-bottom: 40px;
+    display: block;
+    
+    border: 2px solid #fff;
+    background-color: #000;
+}
+
+
 
