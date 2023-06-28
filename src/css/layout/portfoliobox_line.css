@@ -48,7 +48,7 @@
 }
 /* boxtable0 */
 .portfolio__desc.t0 {
-    z-index: 0;
+    /* z-index: 0; */
     width: 120vw;
     height: 60vw;
     position: absolute;
@@ -118,7 +118,7 @@
 
 /* boxtable1 */
 .portfolio__desc.t1 {
-    z-index: 1;
+    /* z-index: 1; */
     width: 174.6vw;
     height: 87.44vw;
     /* position: relative; */
@@ -214,7 +214,8 @@
 
 /* boxtable2 */
 .portfolio__desc.t2 {
-    z-index: 2;
+    pointer-events: none;
+    /* z-index: 2; */
     width: 253.0vw;
     height: 127vw;
     /* position: relative; */
@@ -324,7 +325,8 @@
 
 /* boxtable3 */
 .portfolio__desc.t3 {
-    z-index: 3;
+    pointer-events: none;
+    /* z-index: 3; */
     width: 368vw;
     height: 185.6vw;
     /* position: relative; */

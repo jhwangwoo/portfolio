@@ -110,6 +110,16 @@
 } */
 
 /* boxtable1 */
+.portfolio__item.t1 {
+}
+.portfolio__item.t1 ul {}
+.portfolio__item.t1 ul li {}
+.portfolio__item.t1 ul li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    
+}
 /* boxtable2 */
 
 /* boxtable3 */
