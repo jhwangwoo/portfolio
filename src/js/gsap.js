@@ -1,3 +1,4 @@
+
 const lenis = new Lenis();
 
 lenis.on('scroll', e => {
@@ -36,15 +37,34 @@ ScrollTrigger.create({
     start: 'top -31%',
     end: '+=4500vh',
     scrub: true,
-    // pin: true,
-    // markers: true,
-    // anticipatePin: 1
+    markers: false,
 });
 const ani2 = gsap.timeline();
 ani2.to('.portfolio__desc', { scale: 0.65, ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.5 }, 'a');
 ani2.to('.title.t1', { yPercent: 15, ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.5 }, 'a');
 ani2.to('.title.t2', { yPercent: -15, ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.5 }, 'a');
 ani2.to('.scrolldesc', { opacity: 0, ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.5 }, 'a');
+ani2.fromTo('.portfolio__item.t1 ul li', { xPercent: 480 }, { xPercent: -609, delay: 0.24, duration: 0.4 }, 'a');
+
+ani2.fromTo('.const1', { yPercent: -105 }, { yPercent: 0, ease: 'expo.inOut', easeParams: [0.1, 0.2] }, 'b');
+ani2.fromTo('.const2', { yPercent: 105 }, { yPercent: 0, ease: 'expo.inOut', easeParams: [0.1, 0.2] }, 'b');
+ani2.to('.portfolio__desc',{ scale: 0.45, ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.35, delay: 0.07 },'b',);
+ani2.to('.title.t1', { yPercent: 55, ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.4, delay: 0.1 }, 'b');
+ani2.to('.title.t2', { yPercent: -55, ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.4, delay: 0.1 }, 'b');
+
+ani2.to('.title.t1', { opacity: 0 }, 'c');
+ani2.to('.title.t2', { opacity: 0 }, 'c');
+ani2.to('.portfolio__item.t2 ul li', { yPercent: -702, duration: 1 }, 'c');
+ani2.to('.portfolio__desc',{ scale: 0.31, ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.35, delay: 0.5 },'c',);
+ani2.fromTo('.my__desc',{ xPercent:-200 ,ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.35, delay: 0.5 },
+{ xPercent:0 ,ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.35, delay: 0.5 },'c',);
+ani2.fromTo('.my__desc2',{ xPercent:-400 ,ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.35, delay: 0.5 },
+{ xPercent:-50 ,ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.35, delay: 0.5 },'c',);
+ani2.fromTo('.my__img',{ xPercent:-200 ,ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.35, delay: 0.5 },
+{ xPercent:0 ,ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.35, delay: 0.5 },'c',);
+ani2.fromTo('.my__link',{ xPercent:200 ,ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.35, delay: 0.5 },
+{ xPercent:0 ,ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.35, delay: 0.5 },'c',);
+
 ScrollTrigger.create({
     animation: ani2,
     trigger: '.portfolio__desc.t0',
@@ -53,39 +73,5 @@ ScrollTrigger.create({
     scrub: true,
     // pin: true,
     // anticipatePin: 1,
-    // markers: true,
-});
-
-const ani3 = gsap.timeline();
-ani2.fromTo('.portfolio__item.t1 ul li', { xPercent: 480 }, { xPercent: -600, delay: 0.24, duration: 0.4 }, 'a');
-ScrollTrigger.create({
-    animation: ani3,
-    trigger: '.portfolio__desc.t0',
-    start: '12500vh',
-    end: '17500vh',
-    scrub: true,
-    // pin: true,
-    // anticipatePin: 1,
-    // markers: true,
-});
-
-const ani4 = gsap.timeline();
-ani2.fromTo('.const1', { yPercent: -105 }, { yPercent: 0, ease: 'expo.inOut', easeParams: [0.1, 0.5] }, 'b');
-ani2.fromTo('.const2', { yPercent: 105 }, { yPercent: 0, ease: 'expo.inOut', easeParams: [0.1, 0.5] }, 'b');
-ani2.to(
-    '.portfolio__desc',
-    { scale: 0.45, ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.35, delay: 0.05 },
-    'b',
-);
-ani2.to('.title.t1', { yPercent: 55, ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.4, delay: 0.1 }, 'b');
-ani2.to('.title.t2', { yPercent: -55, ease: 'expo.inOut', easeParams: [0.1, 1], duration: 0.4, delay: 0.1 }, 'b');
-ScrollTrigger.create({
-    animation: ani4,
-    trigger: '.portfolio__desc.t0',
-    start: '17500vh',
-    end: '28150vh',
-    scrub: true,
-    // pin: true,
-    // anticipatePin: 1,
-    markers: true,
+    markers: false,
 });
