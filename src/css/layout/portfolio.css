@@ -256,7 +256,7 @@
     position: absolute;
     top: 16.5%;
     transition: all 0.3s;
-    outline: 1rem solid;
+    
 }
 .portfolio__item.t2 ul li a h3 {
     color: #000;
