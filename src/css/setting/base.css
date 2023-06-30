@@ -61,7 +61,7 @@ body, input, textarea, select, button, table {
 }
 a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     /* position: relative;
     z-index: 9999; */
     pointer-events: auto;
