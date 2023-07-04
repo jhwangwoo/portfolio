@@ -43,7 +43,7 @@ ani2.to('.portfolio__desc', { scale: 0.65, ease: 'expo.inOut', duration: 0.45 },
 ani2.to('.title.t1', { yPercent: 15, ease: 'expo.inOut', duration: 0.5 }, 'a');
 ani2.to('.title.t2', { yPercent: -15, ease: 'expo.inOut', duration: 0.5 }, 'a');
 ani2.to('.scrolldesc', { opacity: 0, ease: 'expo.inOut', duration: 0.5 }, 'a');
-ani2.fromTo('.portfolio__item.t1 ul li', { xPercent: 480 }, { xPercent: -670, delay: 0.24, duration: 0.5 }, 'a');
+ani2.fromTo('.portfolio__item.t1 ul li', { xPercent: 480 }, { xPercent: -560, delay: 0.24, duration: 0.5 }, 'a');
 
 ani2.fromTo('.const1', { yPercent: -105 }, { yPercent: 0, ease: 'expo.inOut' }, 'b');
 ani2.fromTo('.const2', { yPercent: 118 }, { yPercent: 0, ease: 'expo.inOut' }, 'b');
