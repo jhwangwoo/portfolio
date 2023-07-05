@@ -9,7 +9,7 @@
     z-index: 100;
     
 }
-.portfolio__developer > h1 {
+.portfolio__developer > a > h1 {
     font-size: 1vw;
     font-weight: 550;
     padding-top: 0.3vw;
@@ -329,7 +329,7 @@
 }
 .my__desc2 span {
     display: inline-block;
-    padding: 5vw;
+    padding: 4vw;
     word-break:keep-all;
     font-size: 3.4vw;
     line-height: 1.4;
