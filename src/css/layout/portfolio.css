@@ -325,8 +325,15 @@
     height: 20%;
 
     border: 3px solid #fff;
-    font-size: 3vw;
     background-color: #000;
+}
+.my__desc2 span {
+    display: inline-block;
+    padding: 5vw;
+    word-break:keep-all;
+    font-size: 3.4vw;
+    line-height: 1.4;
+    font-weight: 400;
 }
 .my__img {
     position: absolute;
