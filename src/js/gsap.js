@@ -53,7 +53,7 @@ ani2.to('.title.t2', { yPercent: -55, ease: 'expo.inOut', duration: 0.4, delay: 
 
 ani2.to('.title.t1', { opacity: 0 }, 'c');
 ani2.to('.title.t2', { opacity: 0 }, 'c');
-ani2.to('.portfolio__item.t2 ul li', { yPercent: -702, duration: 1 }, 'c');
+ani2.to('.portfolio__item.t2 ul li', { yPercent: -550, duration: 1 }, 'c');
 ani2.to('.portfolio__desc', { scale: 0.31, ease: 'expo.inOut', duration: 0.35, delay: 0.5 }, 'c');
 
 ani2.from('.my__desc', { xPercent: -200, ease: 'expo.inOut', duration: 0.35, delay: 0.5 }, 'c');
