@@ -11,19 +11,19 @@
 }
 @media(max-height: 730px ){
     .portfolio__animate {
-        height: 3050vh;
+        height: 3200vh;
     
     }
 }
 @media(max-height: 680px ){
     .portfolio__animate {
-        height: 3100vh;
+        height: 3450vh;
     
     }
 }
 @media(max-height: 630px ){
     .portfolio__animate {
-        height: 3150vh;
+        height: 3800vh;
     }
 }
 
