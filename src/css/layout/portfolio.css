@@ -459,6 +459,25 @@
     .portfolio__item.t1 ul li a .site__box .site__desc {
         font-size: 15px;
     }
+    .my__desc {
+        top: 5%;
+        left: 12%;
+        width: 25%;
+        height: 40%;
+    }
+    .my__desc span{ 
+        font-size: 3.8vw
+    }
+    .my__desc2 {
+        top:30%;
+        left: 50%;
+        width: 20%;
+        height: 30%;
+
+    }
+    .my__desc2 span{ 
+        font-size: 3.9vw
+    }
 
 
 }
