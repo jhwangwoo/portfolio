@@ -335,12 +335,6 @@
     line-height: 1.4;
     font-weight: 400;
 }
-
-@media(max-width:960px){
-    .my__desc span {font-size: 15px;}
-    .my__desc2 span {}
-
-};
 .my__img {
     position: absolute;
     top: 51%;
