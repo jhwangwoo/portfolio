@@ -1,3 +1,38 @@
+#progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    z-index: 100000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+#progress h2 {
+    font-size: 4.1vw;
+    font-family: "GmarketSans";
+    font-weight: bold;
+    line-height: .7;
+    text-transform: uppercase;
+}
+
+.progress-text {
+    font-size: 5.5vw;
+    font-weight: 900;
+    font-family: "GmarketSans";
+    color: #000;
+    -webkit-text-stroke: 2px #fff;
+}
+
+
 .portfolio__developer {
     position: absolute;
     left: 50%;
@@ -9,10 +44,18 @@
     z-index: 100;
     
 }
-.portfolio__developer > a > h1 {
+.portfolio__developer > button {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #000;
     font-size: 1vw;
     font-weight: 550;
     padding-top: 0.3vw;
+    color: #fff;
+}
+.portfolio__developer > button > span {
+
 }
 /* @media  */
 
@@ -324,9 +367,9 @@
     transform: translate(-50%, -50%);
     width: 20%;
     height: 20%;
-
-    border: 3px solid #fff;
     background-color: #000;
+    
+    border: 3px solid #fff;
 }
 .my__desc2 span {
     display: inline-block;

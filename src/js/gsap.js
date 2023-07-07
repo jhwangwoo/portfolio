@@ -11,6 +11,7 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+// function gsapscroll() {
 const arrowTimeline = gsap.timeline({ repeat: -1 });
 
 arrowTimeline
@@ -39,7 +40,7 @@ ScrollTrigger.create({
     markers: false,
 });
 var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-console.log(width);
+// console.log(width);
 const ani2 = gsap.timeline();
 ani2.to('.portfolio__desc', { scale: 0.65, ease: 'expo.inOut', duration: 0.45 }, 'a');
 ani2.to('.title.t1', { yPercent: 15, ease: 'expo.inOut', duration: 0.5 }, 'a');
@@ -84,3 +85,4 @@ ScrollTrigger.create({
     // anticipatePin: 1,
     markers: false,
 });
+// }

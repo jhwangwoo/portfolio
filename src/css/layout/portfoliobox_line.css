@@ -334,6 +334,7 @@
     background-color: #fff;
 } 
 .portfolio__desc.t3::after {
+    z-index: -1;
     top: 0;
     left: 0;
     transform: rotate(26.9deg);

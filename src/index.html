@@ -6,11 +6,18 @@
     <title>PORTFOLIO</title>
 </head>
 <body>
-    <main>
+    <!-- <div class="loader">
+        <span class="loader-text"></span>
+    </div> -->
+    <main id="main">
+        <div id="progress">
+            <h2>loading</h2>
+            <div class="progress-text">0%</div>
+        </div>
         <div class="portfolio__wrap">
             <div class="portfolio__animate">
                 <div class="portfolio__contents">
-                    <div class="portfolio__developer"><a href="" onclick="resetPage()"><h1>HWANG WOO</h1></a></div>
+                    <div class="portfolio__developer"><button onclick="reloadPage()">HWANG WOO</button></div>
                     <section class="portfolio__desc t0">
                         <div class="portfolio__line t0"></div>
                         <div class="portfolio__item t0">
@@ -164,8 +171,7 @@
                                 <div class="my__desc2">
                                     <span>
                                         어떤 일이라도 끊임없이 노력하면 반드시 좋은 결과가 따라온다고 생각합니다.<br>
-                                        모든 시작에 대해 두려워하지 않고 도전하고 배움에 있어 열정과 겸손함을 유지하며<br>
-                                        세심하고 꼼꼼하게 파고드는 개발자가 되겠습니다.<br>
+                                        모든 시작에 대해 두려워하지 않고 도전하고 배움에 있어 열정과 겸손함을 유지하며 세심하고 꼼꼼하게 파고드는 개발자가 되겠습니다.<br>
                                     </span>
                                 </div>
                                 <div class="my__img"><img src="images/myportfolio.png" alt="JHW사진"></div>
@@ -202,13 +208,70 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script type="module" src="main.js"></script>
     <script type="module" src="./js/gsap.js"></script>
-    <script>
-        function reloadPage() {
-          location.reload();
+
+<script type="text/javascript">
+    var progressdotTimer;
+    function loadingdot() {
+        let dots = ""
+        progressdotTimer = setInterval(() => {
+            document.querySelector("#progress h2").textContent = "loading" + dots;
+            dots += "."              
+            if (dots.length >= 4) {
+                dots = ""
+            }
+        }, 500);
+    }
+    loadingdot();
+    function stopLoadingdot() {
+        clearInterval(progressdotTimer);
+    }
+    document.addEventListener('keydown', function(event) {
+        if (event.keyCode === 116) { // F5 키의 키 코드는 116입니다
+            event.preventDefault(); // 기본 동작을 막기
+            reloadPage(); 
         }
-      </script>
+    });
+    function reloadPage() {
+        location.href = location.href
+    } 
+
+    function imagesProgress() {
+      var $container = $("#progress"),
+        $progressText = $container.find(".progress-text"),
+        imgLoad = imagesLoaded("body"),
+        imgTotal = imgLoad.images.length,
+        imgLoaded = 0,
+        current = 0,
+        progressTimer = setInterval(updateProgress, 2000 / 60);
+
+        
+        imgLoad.on("progress", function () {
+            imgLoaded++;
+            
+        });
+      function updateProgress() {
+        var target = (imgLoaded / imgTotal) * 100;
+
+        current += (target - current) * 0.1;
+        $progressText.text(Math.floor(current) + "%");
+
+        if (current >= 100) {
+          clearInterval(progressTimer);
+        }
+        if (current > 99.9) {
+          current = 100;
+          stopLoadingdot();
+          $container.fadeOut("slow");
+        }
+      }
+    }
+    imagesProgress();
+</script>
+
 </body>
 </html> 
